@@ -6,7 +6,7 @@ html {
   /* background-color: blue; */
   color: white;
   background-image: url("/public/homepage-bg.jpg");
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   height: 100vh;
   background-position: center;
   text-align: center;
@@ -45,6 +45,12 @@ html {
   background-color: white;
   height: 67px;
   margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .search {
+    width: 90%;
+  }
 }
 
 .search-field {
@@ -166,8 +172,8 @@ h1 {
 .date-card {
   margin: 10px;
   font-size: 19px;
-  width: 90px;
-  height: 60px;
+  width: 60%;
+  height: 50px;
   background-color: white;
   color: black;
   font-weight: 800;
@@ -245,11 +251,51 @@ h1 {
   position: relative;
 }
 
-/* .right-block {
-  flex: 0 1 300px;
+@media only screen and (max-width: 768px) {
+  .main-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .forecast-cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    flex: 1 1 90%;
+  }
+  .date-card {
+    /* width: 80px; */
+    height: 50px;
+    font-size: 16px; /* Decrease font size */
+    width: calc(100% - 20px);
+  }
+  p {
+    line-height: 30px;
+  }
+  /* .weather-tooltip {
+    width: 277.18px;
+    .left-block {
+      flex: 0 1 65px;
+    }
+  } */
+
+  /* .weather-tooltip {
+    width: 65%;
+  } */
+
+  .weather-tooltip {
+    flex: 0 1 65%;
+    width: 277.18px;
+    .inner-block {
+      flex-direction: column;
+    }
+  }
+
+  .left-block, .right-block {
+      flex: 0 1 60px;
+      .indent {
+        display: inline-block;
+        vertical-align: none;
+        width: 110px;
+      }
+    }
 }
-.indent {
-  display: inline-block;
-  vertical-align: none;
-  width: 110px;
-} */
